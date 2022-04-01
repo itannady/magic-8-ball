@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Javascript -->
+    <script defer src="./js/script.js"></script>
+    <title>Magic 8 Ball</title>
+  </head>
+
+  <body>
+    <!-- Header  -->
+    <header>
+      <div class="bez-container">
+        <div id="left-bez"></div>
+        <div id="right-bez"></div>
+        <div id="center-bez"></div>
+      </div>
+    </header>
+    <!-- Header ends -->
+
+    <!-- Screen -->
+
+    <section class="screen-wrapper">
+      <div id="outline">
+        <div id="grey-border">
+          <div id="matrix-wrapper">
+            <div class="line"></div>
+            <h3>DOT MATRIX WITH STEREO SOUND</h3>
+            <div class="line"></div>
+          </div>
+          <div id="battery-wrapper">
+            <div id="blink"></div>
+            <h5>BATTERY</h5>
+          </div>
+          <div class="container">
+            <div id="screen">
+              <img id="logo" src="img/logo.png" alt="" />
+              <h2 id="prompt">Ask me anything!</h2>
+
+              <!-- User question input -->
+              <input type="text" id="question" placeholder="Enter a question" value=""/>
+
+              <img id="ball" src="img/ball2.png" alt="" />
+              <img id="shadow" src="img/shadow.png" />
+       
+              <div id="star_wrapper">
+                <img id="star" src="img/star.png" />
+                <p id="answer"></p>
+                <img id="star" src="img/star.png" />
+              </div>
+            </div>
+            <div id="screen_off" class="hide"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen ends -->
+
+    <!-- Buttons -->
+    <section id="split-container">
+      <div id="power-wrapper">
+        <div class="power-eclipse">
+          <button id="power_btn" onclick="power()"></button>
+        </div>
+        <h4>POWER</h4>
+      </div>
+      <div id="btn-wrapper">
+        <div class="eclipse">
+          <button id="submit-btn" onclick="checkQuestion()"></button>
+        </div>
+        <h4>SUBMIT</h4>
+      </div>
+    </section>
+    <!-- Buttons end -->
+  </body>
+</html>
