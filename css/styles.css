@@ -16,10 +16,9 @@ body {
   ); */
   width: 100vw;
   height: 100vh;
-  background: #D8D5CD;
+  background: #d8d5cd;
   /* box-shadow: inset 0 10px 0 0 #e4e4e4; */
 }
-
 
 /* Bezel */
 header {
@@ -98,7 +97,6 @@ header {
   z-index: 1;
 }
 
-
 #grey-border {
   width: 90vw;
   height: 75vh;
@@ -106,7 +104,6 @@ header {
   border: 3px solid #969696;
   box-shadow: inset 0 10px 5px 0 #b4b4b4;
   border-radius: 20px 20px 100px 20px;
-  
 }
 
 #matrix-wrapper {
@@ -120,7 +117,7 @@ header {
 .line {
   width: 10%;
   height: 8px;
-  border-top: 5px solid #761C55;
+  border-top: 5px solid #761c55;
   border-bottom: 5px solid #4b52a7;
 }
 
@@ -142,7 +139,6 @@ h3 {
   align-items: center;
   top: 25vmin;
   left: 5vmin;
-  
 }
 
 #blink {
@@ -153,22 +149,20 @@ h3 {
   /* box-shadow: 0px 0px 10px 5px rgba(214,28,65,0.92); */
 
   background: radial-gradient(#555, #333);
-  animation: shine 1s 1s 1 alternate ;
+  animation: shine 40s infinite;
 }
 
 @keyframes shine {
   100% {
     background: radial-gradient(rgb(241, 155, 241), #e86398);
     filter: drop-shadow(0 0 #e86398) drop-shadow(0 0 #e86398);
-}
+  }
 }
 
 h5 {
   margin-top: 2px;
   color: white;
 }
-
-
 
 /* Screen */
 .container {
@@ -177,15 +171,13 @@ h5 {
   justify-content: center;
   align-items: center;
   bottom: 20px;
-  
- 
 }
 
 #screen {
   position: relative;
   width: 60vw;
   height: 65vh;
-  background: #F7FFB7;
+  background: #f7ffb7;
   box-shadow: 0px 5px 15px 10px rgba(37, 37, 37, 0.733) inset;
   display: flex;
   justify-content: center;
@@ -199,32 +191,40 @@ h5 {
   width: 60vw;
   height: 65vh;
   position: absolute;
-  background: repeating-linear-gradient(0deg,
-  transparent,
-  transparent 1px,
-  rgba(48, 48, 48, 0.315) 1px,
-  rgba(48, 48, 48, 0.356) 2px);
-
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(48, 48, 48, 0.315) 1px,
+    rgba(48, 48, 48, 0.356) 2px
+  );
 }
 
 #screen_off {
   position: relative;
   width: 60vw;
-  height: 65vh;   
+  height: 65vh;
   background: #829531;
   box-shadow: 0px 5px 15px 10px rgba(37, 37, 37, 0.733) inset;
-  animation: off 1s ease 1 ;
-
-
-
+  animation: off 1s ease 1;
 }
 
 @keyframes off {
-  0% {  background: #F7FFB7;}
-  35% { background: #d4df81;}
-  55% { background: #b5c060;}
-  75% { background: #8b9c3d;}
-  100% { background: #829531;}
+  0% {
+    background: #f7ffb7;
+  }
+  35% {
+    background: #c5cf77;
+  }
+  55% {
+    background: #a2ac58;
+  }
+  75% {
+    background: #8b9c3d;
+  }
+  100% {
+    background: #829531;
+  }
 }
 
 #screen_off::after {
@@ -232,11 +232,13 @@ h5 {
   width: 60vw;
   height: 65vh;
   position: absolute;
-  background: repeating-linear-gradient(0deg,
-  transparent,
-  transparent 1px,
-  rgba(48, 48, 48, 0.315) 1px,
-  rgba(48, 48, 48, 0.356) 2px);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 1px,
+    rgba(48, 48, 48, 0.315) 1px,
+    rgba(48, 48, 48, 0.356) 2px
+  );
 }
 
 .hide {
@@ -246,7 +248,6 @@ h5 {
 #logo {
   width: 60vmin;
   top: 20px;
-  
 }
 
 #prompt {
@@ -254,8 +255,7 @@ h5 {
   top: 17vmin;
   font-size: 1.5rem;
   font-family: "Press Start 2P", cursive;
-  color: #031B27;
-
+  color: #031b27;
 }
 
 #question {
@@ -266,20 +266,17 @@ h5 {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-color: #031B27;
+  border-color: #031b27;
   width: 60vmin;
   font-family: "Press Start 2P", cursive;
-  color: #2A8037;
-  
+  color: #2a8037;
 }
 
 #question::placeholder {
   text-align: center;
 }
 
-
 /* Image */
-
 
 #ball {
   position: absolute;
@@ -290,33 +287,37 @@ h5 {
 
 /* Floating animation */
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 15px); }
-  100%   { transform: translate(0, -0px); }  
-
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
 #shadow {
   position: absolute;
   height: 5vmin;
   top: 51vmin;
-  animation: shadow 3s infinite alternate ;
-
+  animation: shadow 3s infinite alternate;
 }
 
 @keyframes shadow {
-	0% {
-    width:180px;
-	}
-	50% {
-    width:150px;
-	}
-	100% {
-    width:180px;
-	}
+  0% {
+    width: 180px;
+  }
+  50% {
+    width: 150px;
+  }
+  100% {
+    width: 180px;
+  }
 }
 
-#star_wrapper { 
+#star_wrapper {
   position: absolute;
   width: 80%;
   display: flex;
@@ -327,26 +328,26 @@ h5 {
 }
 
 #star {
-width: 40px;
-/* display: none; */
-animation-name: spin;
-animation-duration: 2000ms;
-animation-iteration-count: 1;
+  width: 40px;
+  /* display: none; */
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: 1;
 }
 
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 #answer {
   bottom: 10px;
   font-family: "Press Start 2P", cursive;
-  color: #2A8037;
+  color: #2a8037;
 }
 
 /* Bottom buttons */
@@ -385,12 +386,8 @@ animation-iteration-count: 1;
   border-bottom: 5px solid #494949;
   transition: all 0.1s;
 
-  background-image: linear-gradient( 6deg,#6F7875,#9B9B9B 89%);	
-	box-shadow: inset 1px 2px 4px #b8c2b8, 
-	-1px -1px 2px #d8d2d2;
-
-
-	
+  background-image: linear-gradient(6deg, #6f7875, #9b9b9b 89%);
+  box-shadow: inset 1px 2px 4px #b8c2b8, -1px -1px 2px #d8d2d2;
 }
 
 /* #power-btn:hover, */
@@ -423,11 +420,12 @@ animation-iteration-count: 1;
   border-bottom: 5px solid #6d173a;
   transition: all 0.1s;
 
-  
-  background-image: linear-gradient( 6deg,rgba(133, 50, 108, 0.61),#6D1851 89%);	
-	box-shadow: inset 1px 2px 4px #A87493, 
-	-1px -1px 2px #000000;
-
+  background-image: linear-gradient(
+    6deg,
+    rgba(133, 50, 108, 0.61),
+    #6d1851 89%
+  );
+  box-shadow: inset 1px 2px 4px #a87493, -1px -1px 2px #000000;
 }
 
 /* #submit-btn:hover, */
@@ -436,8 +434,8 @@ animation-iteration-count: 1;
   transform: translate(0px, 3px);
   border-bottom: 1px solid #6d173a;
 
-  box-shadow: inset 0px 0px 0px #A87493, -1px -1px 2px #000000, 0px 0px 0px rgba(125, 136, 134, 0.79);
-
+  box-shadow: inset 0px 0px 0px #a87493, -1px -1px 2px #000000,
+    0px 0px 0px rgba(125, 136, 134, 0.79);
 }
 
 #btn-wrapper {
@@ -450,7 +448,6 @@ h4 {
   position: relative;
   color: #4b52a7;
   margin-left: 5px;
-
 }
 
 /* Shake animation */
@@ -458,20 +455,35 @@ h4 {
   position: absolute;
   top: 28vmin;
   width: 22vmin;
-  animation: shake 3s ease infinite; ; 
+  animation: shake 3s ease infinite;
 }
 
 @keyframes shake {
-  0% { transform:translate(0,0) }
-  1.78571% { transform:translate(10px,0) }
-  3.57143% { transform:translate(0,0) }
-  5.35714% { transform:translate(10px,0) }
-  7.14286% { transform:translate(0,0) }
-  8.92857% { transform:translate(10px,0) }
-  10.71429% { transform:translate(0,0) }
-  100% { transform:translate(0,0) }
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(10px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(10px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(10px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
-
 
 /* @media (max-width: 481px) {
 
@@ -513,85 +525,68 @@ width: 40px;
 
 } */
 
-
 @media (max-width: 640px) {
-
   #prompt {
     top: 18vmin;
     font-size: 1rem;
   }
-  
+
   /* Image */
   #ball {
     top: 45vmin;
     width: 25vmin;
-   
   }
-  
+
   #shadow {
     height: 3vmin;
     top: 55vmin;
   }
-  
-  #star_wrapper { 
+
+  #star_wrapper {
     bottom: 10vmin;
   }
-  
+
   #star {
-  width: 40px;
-  
+    width: 40px;
   }
-  
+
   #answer {
     font-family: "Press Start 2P", cursive;
-    color: #2A8037;
+    color: #2a8037;
   }
-  
 }
-  
-  
-
 
 @media (max-width: 768px) {
-
   #prompt {
     top: 18vmin;
-
   }
-  
+
   #question {
     top: 25vmin;
     width: 50vmin;
-    
   }
-  
+
   /* Image */
   #ball {
     top: 30vmin;
     width: 23vmin;
-   
   }
-  
+
   #shadow {
     height: 3vmin;
     top: 55vmin;
   }
-  
-  #star_wrapper { 
+
+  #star_wrapper {
     bottom: 10vmin;
   }
-  
+
   #star {
-  width: 40px;
-  
+    width: 40px;
   }
-  
+
   #answer {
     font-family: "Press Start 2P", cursive;
-    color: #2A8037;
+    color: #2a8037;
   }
-  
-  }
-  
-  
-
+}
