@@ -9,74 +9,55 @@ let button = document.getElementById("submit-btn");
 let answer = document.getElementById("answer");
 let ball = document.getElementById("ball");
 
+// Tie enter key with submit button
 // let input = document.getElementById('question');
 
-// document.addEventListener("keyup", function(event) {
+// window.addEventListener("keyup", function(event) {
 //     if (event.keyCode === 13 ) {
 //         event.preventDefault();
 //         button.click();
 //     }
 // }
 
+//Checks if input value is a question
 function checkQuestion() {
   if (!question.value.includes("?")) {
     alert("Please enter a question");
     console.log(question);
   } else {
-    // ball.style.animation = 'none';
     document.getElementById("ball").id = "shake";
-    // document.getElementById("shadow").style.animation = "none";
-    // ball.className = "shake";
 
     let star = document.getElementById("star_wrapper");
     star.style.display = "flex";
 
     question.addEventListener("click", reset);
     function reset() {
-        let element = document.getElementById("shake").id = "ball";
-        // document.getElementById("shadow").style.animation = "shadow";
-        star.style.display = "none";
-        question.value = "" ;
-        console.log(element) 
+      let element = (document.getElementById("shake").id = "ball");
+      // document.getElementById("shadow").style.animation = "shadow";
+      star.style.display = "none";
+      question.value = "";
+      console.log(element);
     }
   }
 }
 
-// Add on or off function to power button 
-    // function power() {
-    //     let screen = document.getElementById('screen');
-    //     if (screen.style.display = "flex") { 
-    //      screen.style.display = "none";
-    //      document.getElementById('screen_off').classList.remove ("hide"); 
-        
-    //     }
-
-    //     if (screen.style.display = "none") {
-    //         document.getElementById('screen_off').classList.add ("hide");
-    //         screen.style.display = "flex";
-          
-    //     }
-        
-       
-    // }
-
-    function power() {
-        let screen = document.getElementById('screen');
-        if (showScreen === true) {
-            screen.style.display = "flex"
-            document.getElementById('screen_off').classList.add ("hide"); 
-        }
-        else {
-            document.getElementById('screen_off').classList.remove ("hide"); 
-            screen.style.display = "none";
-            
-        }
-    }
-
+// Add on or off function to power button
 let showScreen = false;
 
+function power() {
+  let screen = document.getElementById("screen");
 
-// Add click event to the button
+  showScreen = !showScreen;
+  if (showScreen === true) {
+    screen.style.display = "flex";
+    document.getElementById("screen_off").classList.add("hide");
+  } else {
+    document.getElementById("screen_off").classList.remove("hide");
+    screen.style.display = "none";
+  }
+}
+
+// Add click event to the button to select random answer
 button.addEventListener("click", function getFortune() {
   let randomNumber = Math.floor(Math.random() * 8);
 
