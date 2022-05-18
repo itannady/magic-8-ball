@@ -10,14 +10,14 @@ let answer = document.getElementById("answer");
 let ball = document.getElementById("ball");
 
 // Tie enter key with submit button
-// let input = document.getElementById('question');
+let input = document.getElementById('question');
 
-// window.addEventListener("keyup", function(event) {
-//     if (event.keyCode === 13 ) {
-//         event.preventDefault();
-//         button.click();
-//     }
-// }
+document.addEventListener("keypress", function(event) {
+    if (event.key === 'Enter' ) {
+        event.preventDefault();
+        button.click();
+    }
+})
 
 //Checks if input value is a question
 function checkQuestion() {
@@ -26,6 +26,7 @@ function checkQuestion() {
     console.log(question);
   } else {
     document.getElementById("ball").id = "shake";
+  
 
     let star = document.getElementById("star_wrapper");
     star.style.display = "flex";
@@ -42,7 +43,7 @@ function checkQuestion() {
 }
 
 // Add on or off function to power button
-let showScreen = false;
+let showScreen = true;
 
 function power() {
   let screen = document.getElementById("screen");
